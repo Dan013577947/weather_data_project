@@ -21,9 +21,9 @@ Here is an example Superset dashboard showing the processed weather metrics:
 - Displayed the final output using Superset
 
 ### Example Charts
-(images/superset2.PNG)
-(images/superset3.PNG)
-(images/superset4.PNG)
+![Dashboard](images/superset2.PNG)
+![Dashboard](images/superset3.PNG)
+![Dashboard](images/superset4.PNG)
 
 ---
 
