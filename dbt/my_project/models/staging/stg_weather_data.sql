@@ -14,6 +14,9 @@ remove_duplicates AS(
 )
 SELECT 
     id,
+    house_number,
+    street,
+    barangay,
     city,
     local_time,
     temperature,

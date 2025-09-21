@@ -7,6 +7,9 @@ sources:
       - name: raw_weather_data
         columns:
           - name: id
+          - name: house_number
+          - name: street
+          - name: barangay
           - name: city
           - name: local_time
           - name: temperature

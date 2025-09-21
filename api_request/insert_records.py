@@ -28,6 +28,9 @@ def create_table(conn):
             CREATE SCHEMA IF NOT EXISTS dev;
             CREATE TABLE IF NOT EXISTS dev.raw_weather_data(
                 id SERIAL PRIMARY KEY,
+                house_number INT,
+                street VARCHAR(25),
+                barangay VARCHAR(20),
                 city VARCHAR(20),
                 local_time TIMESTAMP,
                 temperature FLOAT,
@@ -56,6 +59,9 @@ def insert_table(conn ,data):
         cursor.execute(
             """
             INSERT INTO dev.raw_weather_data(
+                house_number,
+                street,
+                barangay,
                 city,
                 local_time,
                 temperature,
@@ -63,9 +69,12 @@ def insert_table(conn ,data):
                 weather_descriptions,
                 inserted_at,
                 utc_offset
-            ) VALUES(%s,%s,%s,%s,%s,NOW(),%s);
+            ) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,NOW(),%s);
             """,(
-                location['name'],
+                '193',
+                'Cadena de amor street',
+                'Bahay Toro',
+                'Quezon City',
                 location['localtime'],
                 current['temperature'],
                 current['wind_speed'],
@@ -84,7 +93,7 @@ def main():
     try:
         conn = connect_db()
         data = fetch_data()
-        #data = mock_fetch_data()
+        # data = mock_fetch_data()
         create_table(conn)
         insert_table(conn, data)
     except Exception as e:

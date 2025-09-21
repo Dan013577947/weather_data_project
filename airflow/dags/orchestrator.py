@@ -32,7 +32,7 @@ with dag:
     task2 = DockerOperator(
         task_id='weather-data-task2-dbt',
         image='ghcr.io/dbt-labs/dbt-postgres:1.9.latest',
-        command='run --select stg_weather_data daily_average',
+        command='run --select stg_weather_data  hourly_average hourly_hottest_strongest daily_average daily_hottest_temperature_strongest_wind_speed monthly_average yearly_average yearly_hottest_temperature yearly_strongest_wind_speed',
         working_dir='/usr/app',
         mounts=[
             Mount(
@@ -48,7 +48,7 @@ with dag:
         ],
         network_mode="weather_data_project_my-network",
         docker_url="unix://var/run/docker.sock",
-        auto_remove="success"
+        auto_remove='success'
     )
 
     task1 >> task2

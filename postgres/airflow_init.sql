@@ -1,6 +1,9 @@
 CREATE SCHEMA IF NOT EXISTS dev;
 CREATE TABLE IF NOT EXISTS dev.raw_weather_data(
     id SERIAL PRIMARY KEY,
+    house_number INT,
+    street VARCHAR(25),
+    barangay VARCHAR(20),
     city VARCHAR(20),
     local_time TIMESTAMP,
     temperature FLOAT,
