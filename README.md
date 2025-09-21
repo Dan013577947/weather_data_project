@@ -9,7 +9,7 @@ The pipeline is scheduled and managed with Apache Airflow and containerized usin
 ### Dashboard Preview
 Here is an example Superset dashboard showing the processed weather metrics:
 
-![Dashboard Example](images/superset1.png)
+![Dashboard Example](images/superset1.PNG)
 
 ---
 
