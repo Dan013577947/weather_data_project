@@ -1,6 +1,9 @@
 # Weather Data ETL Pipeline Project
 Automated data pipeline that extracts, transforms, and loads weather data into a PostgreSQL database using Airflow and dbt, and Superset displays the final output
 
+## Video Link
+- **Youtube**: [Watch on YT](https://youtu.be/tbXHcp_y7rY)
+  
 ## Project Overview
 The project automates the collection and processing of weather data from my home. It fetches raw weather data from Weatherstack API, processes it using Python scripts, and runs transformations with dbt before loading it into PostgreSQL for analytics. 
 The pipeline is scheduled and managed with Apache Airflow and containerized using Docker, and displayed the final output through Superset.
