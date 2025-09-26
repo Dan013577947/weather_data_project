@@ -1,4 +1,4 @@
-# Weather Data ETL Pipeline Project
+# Weather Data ELT Pipeline Project
 Automated data pipeline that extracts, transforms, and loads weather data into a PostgreSQL database using Airflow and dbt, and Superset displays the final output
 
 ## Video Link
@@ -16,7 +16,7 @@ Here is an example Superset dashboard showing the processed weather metrics:
 ---
 
 ## Key Features
-- Scheduled ETL pipeline using Airflow (PythonOperator & DockerOperator)
+- Scheduled elt pipeline using Airflow (PythonOperator & DockerOperator)
 - Data transformation and modeling with dbt
 - Automated hourly, daily, monthly and yearly aggregation of weather metrics
 - Containerized using Docker and Docker Compose
